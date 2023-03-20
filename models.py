@@ -12,14 +12,14 @@ c = conn.cursor()
 # https://www.w3schools.com/sql/sql_datatypes.asp
 SQL_STATEMENT = """CREATE TABLE Customer (
 	cust_id INTEGER PRIMARY KEY,
-	fname VARCHAR(20),
+	fname VARCHAR(30),
 	lname VARCHAR(30),
 	email VARCHAR(50),
 	join_dt DATE
 );"""
 
-SQL_STATEMENT = """CREATE TABLE Service_Order (
-	order_id INTEGER PRIMARY KEY,
+SQL_STATEMENT = """CREATE TABLE Service_Device (
+	device_id INTEGER PRIMARY KEY,
 	dev_type VARCHAR(40),
 	brand VARCHAR(30),
 	model VARCHAR(30),
@@ -34,9 +34,21 @@ SQL_STATEMENT = """CREATE TABLE Service_Order (
 SQL_STATEMENT = """CREATE TABLE Service (
 	serv_id INTEGER PRIMARY KEY,
 	service VARCHAR(40),
-    hours VARCHAR(40),
-    order_id INTEGER,
-    FOREIGN KEY (order_id) REFERENCES Service_Order(order_id)
+    hours DOUBLE
+);"""
+
+SQL_STATEMENT = """CREATE TABLE Service_Order (
+	order_id INTEGER PRIMARY KEY,
+	cust_id INTEGER,
+    FOREIGN KEY (cust_id) REFERENCES Customer(cust_id)
+        ON DELETE CASCADE 
+        ON UPDATE NO ACTION,
+    device_id INTEGER,
+    FOREIGN KEY (device_id) REFERENCES Service_Device(device_id)
+        ON DELETE CASCADE 
+        ON UPDATE NO ACTION,
+    serv_id INTEGER,
+    FOREIGN KEY (serv_id) REFERENCES Service(serv_id)
         ON DELETE CASCADE 
         ON UPDATE NO ACTION
 );"""
