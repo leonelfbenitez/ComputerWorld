@@ -52,3 +52,16 @@ SQL_STATEMENT = """CREATE TABLE Service_Order (
         ON DELETE CASCADE 
         ON UPDATE NO ACTION
 );"""
+
+SQL_STATEMENT = """CREATE TABLE Shipping (
+	ship_id INTEGER PRIMARY KEY,
+    address VARCHAR(255),
+    state CHAR(2),
+    zip INT,
+    phone CHAR(10),
+    cust_id INTEGER,
+    FOREIGN KEY (cust_id) REFERENCES Customer(cust_id)
+        ON DELETE CASCADE 
+        ON UPDATE NO ACTION,
+);"""
+
