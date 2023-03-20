@@ -64,4 +64,5 @@ SQL_STATEMENT = """CREATE TABLE Shipping (
         ON DELETE CASCADE 
         ON UPDATE NO ACTION,
 );"""
+#
 
