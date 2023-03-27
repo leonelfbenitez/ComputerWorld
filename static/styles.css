@@ -13,10 +13,6 @@ styles.css
               animation: bannermove 70s linear infinite;
   }
   
-  .banner {
-    padding: 5px;
-  }
-  
   .body {
     display: grid;
     justify-content: space-between;
@@ -74,6 +70,7 @@ styles.css
   }
   .banner {
       height: 100%;
+      padding: 5px;
       width: 200%;
   }
   
