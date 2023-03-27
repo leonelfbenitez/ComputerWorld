@@ -7,20 +7,21 @@
     <title>Computer World: Service Center</title>
 </head>
 
-<body style="background-color: #000732;">
-    <header style="background-color: #1BAECE; border-radius:5px; margin:5px;padding-bottom:5px;">
+<body class="template">
+    <header class="header">
+        <!-- Logo -->
         <img src="/static/pics/Computer-World-logos_transparent.png" alt="Computer-World-logo" width="200" height="200">
         
         <!-- Top/Right header button section -->
-        <article style="position:sticky;float:right;margin-top:5px;margin-right:5px;border-radius:5px;;height:200px;">
+        <article class="top_btns">
             <input type="button" class="btn" onclick="" value="Login">
             <input type="button" class="btn" onclick="" value="My Account">
             <input type="button" class="btn" onclick="" value="My Cart">
         </article>
         
         <!-- header title and banner section -->
-        <article class="container" style="background-color:#427BD2;border-radius:5px;margin:5px;height:180px;padding:10px;">
-            <h1 style="font-family: 'Inter';text-align:center;padding:20px;color:#000732;text-shadow: 1px 1px 3px #000732, 1px 1px 3px #000;">Computer Service Center</h1>
+        <article class="container">
+            <h1 class="heading">Computer Service Center</h1>
                 <!-- Each image is 350px by 233px -->
                 <article class="banner" >
                     <img class="start" src="https://c2.staticflickr.com/9/8454/28951308921_6589e3f1d3_z.jpg">
@@ -44,33 +45,65 @@
     </header>
 
     <section class="body">
-        <article style="background-color: #1BAECE; border-radius:5px; margin:5px; padding-bottom:5px;">
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
+        <article class="section_body">
+            <article class="section_cell">
                 <h3>Diagnostics and Inspections</h3>    
             </article>
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
-                <h3>Parts Installation</h3>    
+            <article class="section_cell">
+                <h3 class="services">Parts Installation</h3>    
             </article>
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
-                <h3>Repair</h3>    
-            </article>
-        </article>
-        <article style="background-color: #1BAECE; border-radius:5px; margin:5px; padding-bottom:5px;">
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
-                <h3>Data Recovery</h3>    
-            </article>
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
-                <h3>Reformat and Optimize Hard Drives</h3>    
+            <article class="section_cell">
+                <h3 class="services">Repair</h3>    
             </article>
         </article>
-        <article style="background-color: #1BAECE; border-radius:5px; margin:5px; padding-bottom:5px;">
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
-                <h3>Virus Scan and Removal</h3>    
+        <article class="section_body">
+            <article class="section_cell">
+                <h3 class="services">Data Recovery</h3>    
             </article>
-            <article style="background-color:#427BD2; border-radius:5px;  margin:5px; padding-bottom:5px;">
-                <h3>Software Installation and Configuration</h3>    
+            <article class="section_cell">
+                <h3 class="services">Reformat and Optimize Hard Drives</h3>    
+            </article>
+        </article>
+        <article class="section_body">
+            <article class="section_cell">
+                <h3 class="services">Virus Scan and Removal</h3>    
+            </article>
+            <article class="section_cell">
+                <h3 class="services">Software Installation and Configuration</h3>    
             </article>
         </article>
     </section>
+
+    <footer class="footer_frame">
+        <section class="footer">
+            <article class="footer_heading">
+                <h4>Company</h4>
+                <hr color="#000732">
+                <section class="body">
+                    <article style="text-align:left; margin-left: 15px;">
+                        <h4 class="footer_options" onclick="">About</h4>
+                        <h4 class="footer_options" onclick="">Privacy Policy</h4>
+                        <h4 class="footer_options" onclick="">Contact Us</h4>
+                    </article>
+                    <article style="text-align:left; margin-left: 200px;">
+                        <h4 class="footer_options" onclick="">Press</h4>
+                        <h4 class="footer_options" onclick="">Reviews</h4>
+                        <h4 class="footer_options" onclick="">Blogs</h4>
+                    </article>
+                </section>
+            </article>
+            <article class="footer_heading">
+                <h4>Services</h4>
+                <hr color="#000732">
+                <section class="body">
+                    <article style="text-align:left; margin-left: 15px;">
+                        <h4 class="footer_options" onclick="">Online Store</h4>
+                        <h4 class="footer_options" onclick="">Repair Services</h4>
+                        <h4 class="footer_options" onclick="">Recycle</h4>
+                    </article>
+                </section>
+            </article>
+        </section>
+    </footer>
 </body>
 </html>
