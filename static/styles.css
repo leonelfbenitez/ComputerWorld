@@ -1,92 +1,3 @@
-.body {
-  background-color: #000732;
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  height: auto;
-  justify-content: space-between;
-}
-
-.btn {
-  background-color: #427BD2;
-  border: 2px solid #000732;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Inter';
-  font-weight: bold;
-}
-
-.container {
-  background: transparent;
-  background-color: #427BD2;
-  border-radius: 5px;
-  height: 180px;
-  margin: 5px;
-  overflow: hidden;
-}
-
-.footer {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  height: auto;
-  justify-content: space-between;
-}
-
-.header {
-  background-color: #1BAECE;
-  border-radius: 5px;
-  margin: 5px;
-  padding-bottom: 5px;
-}
-
-.heading {
-  color:#000732;
-  font-family: 'Inter';
-  padding:20px;
-  text-align:center;
-  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
-}
-
-.section_body {
-  background-color: #1BAECE; 
-  border-radius:5px; 
-  margin:5px; 
-  padding-bottom:5px;
-}
-
-.section_cell {
-  background-color:#427BD2; 
-  border-radius:5px;
-  color:#000732;
-  font-family: 'Inter'; 
-  margin:5px; 
-  padding: 5px 0;
-  text-align:center;
-  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
-  vertical-align: middle;
-}
-
-.start {
-  -webkit-animation: bannermove 70s linear infinite;
-  -moz-animation: bannermove 70s linear infinite;
-  -ms-animation: bannermove 70s linear infinite;
-  -o-animation: bannermove 70s linear infinite;
-  animation: bannermove 70s linear infinite;
-}
-
-.template {
-  background-color: #000732;
-  position: relative;
-}
-
-.top_btns {
-  border-radius: 5px;
-  float: right;
-  height: 200px;
-  margin-right: 5px;
-  margin-top: 5px;
-  position: relative;
-}
-
 .banner {
   height: 100%;
   padding: 5px;
@@ -113,6 +24,137 @@
   transform: scale(1.1);
 }
 
+.body {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  height: auto;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #427BD2;
+  border: 2px solid #000732;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-weight: bold;
+}
+
+.container {
+  background: transparent;
+  background-color: #427BD2;
+  border-radius: 5px;
+  height: 180px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.footer {
+  padding: 5px;
+  font-family: 'Inter';
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+}
+
+.footer_frame {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: auto;
+  justify-content: space-between;
+  margin: 10px;
+  text-align: center;
+}
+
+.footer_menu {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  height: auto;
+  justify-content: space-between;
+}
+
+.footer_options {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  margin: 5px;
+  padding-bottom: 5px;
+}
+
+.heading {
+  color:#000732;
+  font-family: 'Inter';
+  font-size: 35px;
+  text-align:center;
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+}
+
+.section_body {
+  background-color: #1BAECE; 
+  border-radius:5px; 
+  margin:5px; 
+  padding-bottom:5px;
+}
+
+.section_cell {
+  background-color:#427BD2; 
+  border-radius:5px;
+  color:#000732;
+  font-family: 'Inter'; 
+  margin:5px; 
+  padding: 5px 0;
+  text-align:center;
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+  vertical-align: middle;
+}
+
+.section_body .section_cell:hover {
+  -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.start {
+  -webkit-animation: bannermove 70s linear infinite;
+  -moz-animation: bannermove 70s linear infinite;
+  -ms-animation: bannermove 70s linear infinite;
+  -o-animation: bannermove 70s linear infinite;
+  animation: bannermove 70s linear infinite;
+}
+
+.template {
+  background-color: #000732;
+  position: relative;
+}
+
+.top_btns {
+  border-radius: 5px;
+  float: right;
+  height: 200px;
+  margin-right: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.top_btns .btn:hover {
+  -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.1); 
+}
 
 @keyframes bannermove {
   0% {
