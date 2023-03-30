@@ -54,12 +54,13 @@ def index():
     if request.method == "POST":
 
         if request.form.get("login") == "login":
-               return render_template("a_login.html")
+            return render_template("a_login.html")
         if request.form.get("myacct") == "myacct":
-               return render_template("myacct.html")
+            return render_template("myacct.html")
         if request.form.get("cart") == "cart":
-              return render_template("cart.html")
+            return render_template("cart.html")
     return render_template("service_home.html")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='4000', debug=True)
+    app.run(host='0.0.0.0', port='5000', debug=True)
+    

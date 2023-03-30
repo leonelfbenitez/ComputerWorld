@@ -1,97 +1,128 @@
-styles.css
+.body {
+  background-color: #000732;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  height: auto;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #427BD2;
+  border: 2px solid #000732;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-weight: bold;
+}
 
 .container {
-    background: transparent;
-    overflow: hidden;
-  }
-  
+  background: transparent;
+  background-color: #427BD2;
+  border-radius: 5px;
+  height: 180px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: auto;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  margin: 5px;
+  padding-bottom: 5px;
+}
+
 .start {
-      -webkit-animation: bannermove 70s linear infinite;
-         -moz-animation: bannermove 70s linear infinite;
-          -ms-animation: bannermove 70s linear infinite;
-           -o-animation: bannermove 70s linear infinite;
-              animation: bannermove 70s linear infinite;
-  }
-  
-  .body {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(3, 30%);
-    height: auto;
-  }
-  
-  .btn {
-    background-color:#427BD2;
-    cursor: pointer;
-    font-family: 'Inter';
-    font-weight: bold;
-    border:2px solid #000732;
-    border-radius:5px;
+  -webkit-animation: bannermove 70s linear infinite;
+  -moz-animation: bannermove 70s linear infinite;
+  -ms-animation: bannermove 70s linear infinite;
+  -o-animation: bannermove 70s linear infinite;
+  animation: bannermove 70s linear infinite;
+}
+
+.template {
+  background-color: #000732;
+  position: relative;
+}
+
+.top_btns {
+  border-radius: 5px;
+  float: right;
+  height: 200px;
+  margin-right: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.banner {
+  height: 100%;
+  padding: 5px;
+  width: 200%;
+}
+
+.banner img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.banner img:hover {
+  -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+@keyframes bannermove {
+  0% {
+      margin-left: 1px;
   }
 
-  @keyframes bannermove {
-   0% {
-      margin-left: 0px;
-   }
-   100% {
+  100% {
       margin-left: -5746px;
-   }
-  
   }
-  
-  @-moz-keyframes bannermove {
-   0% {
-     margin-left: 0px;
-   }
-   100% {
-     margin-left: -5746px;
-   }
-  
+}
+
+@-moz-keyframes bannermove {
+  0% {
+      margin-left: 1px;
   }
-  
-  @-webkit-keyframes bannermove {
-   0% {
-     margin-left: 0px;
-   }
-   100% {
-     margin-left: -5746px;
-   }
-  
+
+  100% {
+      margin-left: -5746px;
   }
-  
-  @-o-keyframes bannermove {
-   0% {
-     margin-left: 0px;
-   }
-   100% {
-     margin-left: -5746px;
-   }
-  
+}
+
+@-webkit-keyframes bannermove {
+  0% {
+      margin-left: 1px;
   }
-  .banner {
-      height: 100%;
-      padding: 5px;
-      width: 200%;
+
+  100% {
+      margin-left: -5746px;
   }
-  
-  .banner img {
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      transition: all 1s ease;
+}
+
+@-o-keyframes bannermove {
+  0% {
+      margin-left: 1px;
   }
-  
-  .banner img:hover {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
-      cursor: pointer;
-  
-      -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-      -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-      box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+
+  100% {
+      margin-left: -5746px;
   }
-  
+}
