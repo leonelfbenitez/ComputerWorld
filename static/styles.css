@@ -38,6 +38,33 @@
   padding-bottom: 5px;
 }
 
+.heading {
+  color:#000732;
+  font-family: 'Inter';
+  padding:20px;
+  text-align:center;
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+}
+
+.section_body {
+  background-color: #1BAECE; 
+  border-radius:5px; 
+  margin:5px; 
+  padding-bottom:5px;
+}
+
+.section_cell {
+  background-color:#427BD2; 
+  border-radius:5px;
+  color:#000732;
+  font-family: 'Inter'; 
+  margin:5px; 
+  padding: 5px 0;
+  text-align:center;
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+  vertical-align: middle;
+}
+
 .start {
   -webkit-animation: bannermove 70s linear infinite;
   -moz-animation: bannermove 70s linear infinite;
