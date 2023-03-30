@@ -51,6 +51,8 @@
 .footer {
   padding: 5px;
   font-family: 'Inter';
+  font-size: small;
+  text-align: center;
   text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
 }
 
@@ -62,7 +64,6 @@
   height: auto;
   justify-content: space-between;
   margin: 10px;
-  text-align: center;
 }
 
 .footer_menu {
@@ -74,6 +75,14 @@
 
 .footer_options {
   cursor: pointer;
+}
+
+.footer_menu .footer_options:hover {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .header {
