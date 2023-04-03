@@ -8,9 +8,31 @@
 
 <body class="template">
     <header class="header">
-        <!-- Logo -->
-        <img src="/static/pics/Computer-World-logos_transparent.png" alt="Computer-World-logo" width="200" height="200">
 
+        <nav>
+            <input id="nav-toggle" type="checkbox">
+
+            <ul class="links">
+                <li class="special"><a href="#login">Login</a></li>
+                <li class="special"><a href="#myacct">My Account</a></li>
+                <li class="special"><a href="#mycart">My Cart</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sales Center</a></li>
+                <li><a href="#work">Service Center</a></li>
+                <li><a href="#projects">Recycle Center</a></li>
+                <li><a href="#contact">About</a></li>
+            </ul>
+
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+
+        <!-- Logo -->
+        <img class ="logo" src="/static/pics/Computer-World-logos_transparent.png" alt="Computer-World-logo">
+        
         <!-- Top/Right header button section -->
         <article class="top_btns">
             <input type="button" class="btn" onclick="" value="Login">
@@ -47,31 +69,31 @@
 
         <article class="section_body">
             <article class="section_cell">
-                <h3>Diagnostics and Inspections</h3>    
+                <h3 class="selection">Diagnostics and Inspections</h3>    
             </article>
             <article class="section_cell">
-                <h3>Parts Installation</h3>    
+                <h3 class="selection">Parts Installation</h3>    
             </article>
             <article class="section_cell">
-                <h3>Repair</h3>    
+                <h3 class="selection">Repair</h3>    
             </article>
         </article>
 
         <article class="section_body">
             <article class="section_cell">
-                <h3>Data Recovery</h3>    
+                <h3 class="selection">Data Recovery</h3>    
             </article>
             <article class="section_cell">
-                <h3>Reformat and Optimize Hard Drives</h3>    
+                <h3 class="selection">Reformat and Optimize Hard Drives</h3>    
             </article>
         </article>
         
         <article class="section_body">
             <article class="section_cell">
-                <h3>Virus Scan and Removal</h3>    
+                <h3 class="selection">Virus Scan and Removal</h3>    
             </article>
             <article class="section_cell">
-                <h3>Software Installation and Configuration</h3>    
+                <h3 class="selection">Software Installation and Configuration</h3>    
             </article>
         </article>
     
@@ -107,7 +129,29 @@
                     </article>
                 </section>
             </article>
-        
+
+    </footer>
+
+    <footer class="footer_frame_mobile">
+
+        <article class="footer">
+            <h4>Company</h4>
+            <hr color="#000732">
+            <section class="footer_menu">
+                <article style="text-align:left; margin-left: 15px;">
+                    <h4 class="footer_options" onclick="">About</h4>
+                    <h4 class="footer_options" onclick="">Privacy Policy</h4>
+                    <h4 class="footer_options" onclick="">Contact Us</h4>
+                </article>
+                
+                <article style="text-align:left;">
+                    <h4 class="footer_options" onclick="">Press</h4>
+                    <h4 class="footer_options" onclick="">Reviews</h4>
+                    <h4 class="footer_options" onclick="">Blogs</h4>
+                </article>
+            </section>
+        </article>
+
     </footer>
 
 </body>
