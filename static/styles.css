@@ -1,3 +1,9 @@
+
+/* banner styling */
+#nav-toggle {
+  display: none;
+}
+
 .banner {
   height: 100%;
   padding: 5px;
@@ -29,6 +35,8 @@
   grid-template-columns: repeat(3, 30%);
   height: auto;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .btn {
@@ -51,7 +59,7 @@
 .footer {
   padding: 5px;
   font-family: 'Inter';
-  font-size: small;
+  font-size: 10px;
   text-align: center;
   text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
 }
@@ -63,14 +71,14 @@
   grid-template-columns: repeat(2, 50%);
   height: auto;
   justify-content: space-between;
-  margin: 10px;
+  margin: 5px;
 }
 
 .footer_menu {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 25%); /* columns for grid */
   height: auto;
-  justify-content: space-between;
+  justify-content: space-between; /* space between columns */
 }
 
 .footer_options {
@@ -100,6 +108,11 @@
   text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
 }
 
+.logo {
+  width: 200px;
+  height:200px;
+}
+
 .section_body {
   background-color: #1BAECE; 
   border-radius:5px; 
@@ -107,11 +120,13 @@
   padding-bottom:5px;
 }
 
+
 .section_cell {
   background-color:#427BD2; 
   border-radius:5px;
   color:#000732;
-  font-family: 'Inter'; 
+  font-family: 'Inter';
+  font-size: 15px; 
   margin:5px; 
   padding: 5px 0;
   text-align:center;
@@ -131,6 +146,10 @@
   transform: scale(1.1);
 }
 
+.special {
+  display:none;
+}
+
 .start {
   -webkit-animation: bannermove 70s linear infinite;
   -moz-animation: bannermove 70s linear infinite;
@@ -142,6 +161,7 @@
 .template {
   background-color: #000732;
   position: relative;
+  width: auto;
 }
 
 .top_btns {
@@ -204,3 +224,224 @@
       margin-left: -5746px;
   }
 }
+
+/* navigation menu styling*/
+nav {
+	position: absolute; /* follow screen scroll */ 
+	z-index: 10; /* follow viewer - top level*/
+	left: 0;
+	right: 0;
+	top: 90px;
+	font-family: 'Inter';
+	padding: 0 1%;
+	height: 100px;
+}
+
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: right;
+}
+
+nav .links li {
+	list-style: none; /* suppress bulletpoints*/
+}
+
+nav .links a {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000732;
+	text-decoration: none; /* suppress text underline*/
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+}
+
+nav .links a:hover {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#nav-toggle {
+	position: absolute; /* follow screen scroll */
+	top: -100px;
+}
+
+nav .icon-burger {
+	display: none;
+	position: absolute; /* follow screen scroll */
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%); /* repositions an element vertically */
+}
+
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #000732;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out; /* animation */
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+}
+
+@media screen and (max-width: 768px) {
+  
+  #nav-toggle {
+    display: none;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 200px;
+  }
+
+  nav .icon-burger {
+    display: none; /* hide menu */
+    position: absolute; /* follow screen scroll */
+    right: 5%;
+    top: -10%;
+    transform: translateY(-50%); /* repositions an element vertically */
+  }
+
+	nav .links {
+		float: none;
+		position: fixed; /* follow viewer */ 
+		z-index: 9; /* position on top of other elements */
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column; /* position of element */
+		justify-content: space-evenly;
+		background-color: rgba(27,174,206, 0.85);
+		overflow:auto; /* hide overflow elements */
+		box-sizing: border-box;
+		transition: all .5s ease-in-out; /* animation */
+	}
+  
+	nav .links a {
+		font-size: 15px;
+	}
+
+	nav :checked ~ .links { /* transition from parent to child */
+		bottom: 0px;
+	}
+
+	nav .icon-burger {
+		display: block; /* displays element as a block element/takes entiere width */
+	}
+
+  /* transition icon line elements when checked/selected */
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+
+@media screen and (max-width: 414px) {
+  
+  #nav-toggle {
+    display: none;
+  }
+  
+  nav .icon-burger {
+    display: none; /* hide menu */
+    position: absolute; /* follow screen scroll */
+    right: 5%;
+    top: -10%;
+    transform: translateY(-50%); /* repositions an element vertically */
+  }
+
+	nav .links {
+		float: none;
+		position: fixed; /* follow viewer */ 
+		z-index: 9; /* position on top of other elements */
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column; /* position of element */
+		justify-content: space-evenly;
+		background-color: rgba(27,174,206, 0.85);
+		overflow: auto; /* hide overflow elements */
+		box-sizing: border-box;
+		transition: all .5s ease-in-out; /* animation */
+	}
+  
+	nav .links a {
+		font-size: 20px;
+	}
+
+	nav :checked ~ .links { /* transition from parent to child */
+		bottom: 0px;
+	}
+
+	nav .icon-burger {
+		display: block; /* displays element as a block element/takes entiere width */
+	}
+
+  /* transition icon line elements when checked */
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
+  .heading {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  
+
+  .body {
+    width: auto;
+  }
+
+  .selection {
+    font-size: 10px;
+  }
+
+  .section_cell {
+    width: auto;
+  }
+
+  .special {
+    display: block;
+  }
+
+  .top_btns {
+    width: 30%;
+    align-items: center;
+    display: none;
+  }
+
+}
+
