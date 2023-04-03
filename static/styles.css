@@ -319,18 +319,23 @@ nav .icon-burger .line {
 		right: 0;
 		top: 100px;
 		bottom: 100%;
-		width: auto;
+		width: 90%;
 		height: auto;
 		flex-direction: column; /* position of element */
 		justify-content: space-evenly;
 		background-color: rgba(27,174,206, 0.85);
 		overflow:auto; /* hide overflow elements */
-		box-sizing: border-box;
+		box-sizing:content-box;
 		transition: all .5s ease-in-out; /* animation */
 	}
   
 	nav .links a {
 		font-size: 15px;
+    text-align: center;
+	}
+
+  nav .links a:hover {
+    background-color: #427BD2;
 	}
 
 	nav :checked ~ .links { /* transition from parent to child */
