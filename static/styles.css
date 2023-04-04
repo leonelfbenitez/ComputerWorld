@@ -1,65 +1,5 @@
 
-/* template styling */
-.body {
-  height: 100%;
-  position: static;
-  width: 100%;
-  padding: 5px;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: space-between;
-  position: static;
-  width: auto;
-}
-
-/* footer styling */
-.footer {
-  padding: 5px;
-  font-family: 'Inter';
-  font-size: 10px;
-  text-align: center;
-  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
-}
-
-.footer_frame {
-  background-color: #1BAECE;
-  border-radius: 5px;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  height: auto;
-  justify-content: space-between;
-  margin: 5px;
-  padding: 5px;
-}
-
-.footer_frame_mobile {
-  display: none;
-}
-
-.footer_menu {
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  /* columns for grid */
-  height: auto;
-  justify-content: space-between;
-  /* space between columns */
-}
-
-.footer_options {
-  cursor: pointer;
-}
-
-.footer_menu .footer_options:hover {
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
+/* template frame */
 .frame {
   background-color: #000732;
   position: relative;
@@ -73,6 +13,7 @@
   display: none;
 }
 
+/* header styling */
 .header {
   align-content: center;
   background-color: #1BAECE;
@@ -93,46 +34,6 @@
 .logo {
   width: 200px;
   height: 200px;
-}
-
-.section_body {
-  background-color: #1BAECE;
-  border-radius: 5px;
-  margin: 5px;
-  padding-bottom: 5px;
-}
-
-.content_about {
-  background-color: #1BAECE;
-  border-radius: 5px;
-  font-family: 'Inter';
-  margin: 5px;
-  padding-bottom: 5px;
-}
-
-.section_cell {
-  background-color: #427BD2;
-  border-radius: 5px;
-  color: #000732;
-  font-family: 'Inter';
-  font-size: 15px;
-  margin: 5px;
-  padding: 5px 0;
-  text-align: center;
-  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
-  vertical-align: middle;
-}
-
-.section_body .section_cell:hover {
-  -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-  -webkit-transform: scale(1.05);
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transform: scale(1.05); /* element size increase on hover*/
 }
 
 /* Top Buttons */
@@ -328,6 +229,108 @@ nav .icon-burger .line {
   /* animation */
   text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
 }
+
+/* body styling */
+.body {
+  height: 100%;
+  position: static;
+  width: 100%;
+  padding: 5px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+  position: static;
+  width: auto;
+}
+
+.section_body {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  margin: 5px;
+  padding-bottom: 5px;
+}
+
+.content_about {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  font-family: 'Inter';
+  margin: 5px;
+  padding-bottom: 5px;
+}
+
+.section_cell {
+  background-color: #427BD2;
+  border-radius: 5px;
+  color: #000732;
+  font-family: 'Inter';
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px 0;
+  text-align: center;
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+  vertical-align: middle;
+}
+
+.section_body .section_cell:hover {
+  -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.05);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.05); /* element size increase on hover*/
+}
+
+/* footer styling */
+.footer {
+  padding: 5px;
+  font-family: 'Inter';
+  font-size: 10px;
+  text-align: center;
+  text-shadow: 0.1px 0.1px 0.1px #000732, 0.1px 0.1px 0.1px #000;
+}
+
+.footer_frame {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: auto;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+}
+
+.footer_frame_mobile {
+  display: none;
+}
+
+.footer_menu {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  /* columns for grid */
+  height: auto;
+  justify-content: space-between;
+  /* space between columns */
+}
+
+.footer_options {
+  cursor: pointer;
+}
+
+.footer_menu .footer_options:hover {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 /********************** max-width: 768px **********************/
 @media screen and (max-width: 768px) {

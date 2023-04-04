@@ -59,7 +59,7 @@ def index():
             return render_template("myacct.html")
         if request.form.get("cart") == "cart":
             return render_template("cart.html")
-    return render_template("service_about.html")
+    return render_template("service_home.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='4000', debug=True)
