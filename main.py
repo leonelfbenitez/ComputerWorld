@@ -11,8 +11,8 @@ from flask_login import (
 
 app = Flask(__name__)
 
-conn = sqlite3.connect("data/database.db")
-c = conn.cursor()
+# conn = sqlite3.connect("data/database.db")
+# c = conn.cursor()
 
 # Create the table, read the article below if you
 # are unsure of what they mean
@@ -48,18 +48,18 @@ c = conn.cursor()
 # conn.commit()
 # conn.close()
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
     """Renders index page"""
-    if request.method == "POST":
+    # if request.method == "POST":
 
-        if request.form.get("login") == "login":
-            return render_template("a_login.html")
-        if request.form.get("myacct") == "myacct":
-            return render_template("myacct.html")
-        if request.form.get("cart") == "cart":
-            return render_template("cart.html")
-    return render_template("service_home.html")
+    #     if request.form.get("login") == "login":
+    #         return render_template("a_login.html")
+    #     if request.form.get("myacct") == "myacct":
+    #         return render_template("myacct.html")
+    #     if request.form.get("cart") == "cart":
+    #         return render_template("cart.html")
+    return render_template("service_about.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='4000', debug=True)

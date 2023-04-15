@@ -235,7 +235,6 @@ nav .icon-burger .line {
   height: 100%;
   position: static;
   width: 100%;
-  padding: 5px;
 }
 
 .content {
@@ -243,14 +242,18 @@ nav .icon-burger .line {
   grid-template-columns: repeat(3, 30%);
   justify-content: space-between;
   position: static;
-  width: auto;
+  padding: 5px;
 }
 
 .section_body {
   background-color: #1BAECE;
   border-radius: 5px;
-  margin: 5px;
   padding-bottom: 5px;
+}
+
+.content_sec {
+  padding: 10px;
+  width: 100%;
 }
 
 .content_about {
@@ -258,6 +261,7 @@ nav .icon-burger .line {
   border-radius: 5px;
   font-family: 'Inter';
   margin: 5px;
+  padding: 10px;
   padding-bottom: 5px;
 }
 
