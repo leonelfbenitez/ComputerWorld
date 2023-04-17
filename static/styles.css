@@ -38,11 +38,14 @@
 
 /* Top Buttons */
 .btn {
+  text-align: center;
   background-color: #427BD2;
   border: 2px solid #000732;
   border-radius: 5px;
   font-family: 'Inter';
   font-weight: bold;
+  height: 35px;
+  width: 125px;
 }
 
 .top_btns {
@@ -265,6 +268,27 @@ nav .icon-burger .line {
   padding-bottom: 5px;
 }
 
+input, textarea {
+  border-radius: 5px;
+}
+
+.fset {
+  background-color: #1BAECE;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.submit {
+  align-items: center;
+  background-color: #1BAECE;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+}
+
 .section_cell {
   background-color: #427BD2;
   border-radius: 5px;
@@ -346,6 +370,11 @@ nav .icon-burger .line {
   .logo {
       width: 200px;
       height: 200px;
+  }
+
+  .navigate {
+    position: static;
+    display: none;
   }
 
   nav .icon-burger {
@@ -554,3 +583,4 @@ nav .icon-burger .line {
 
 }
 
+/* Style the service form */

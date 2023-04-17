@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+<!-- https://www.w3schools.com/howto/howto_js_form_steps.asp -->
 <html>
 <head>
+  <script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
+    <script>
+      
+    </script>
+    
     <link rel="stylesheet" href="/static/styles.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Computer World: Service Center</title>
 </head>
 
@@ -66,33 +75,47 @@
     </header>
 
     <section class="body">
-        <article class="content_about">
-            <p>Dear valued customer,</p>
-            <p>Thank you for choosing Computer-World Repair Service for your computer needs.</p>
-            <label><b>Services:</b></label>
-                <p class="content_sec">We offer a wide range of computer repair services, including virus removal, 
-                software installation and configuration, hardware replacement and upgrades, and data recovery. 
-                Our technicians are trained and experienced in working with a variety of computer brands and models.</p>
-            <label><b>Fees:</b></label> 
-                <p class="content_sec">charge a rate of $75 per hour for our computer repair services. There may be additional charges 
-                for replacement parts or specialized software required for certain repairs. We will provide you with 
-                a detailed estimate of the costs involved before beginning any work.  Also, be aware that shipping 
-                costs are not included unless stated otherwise.</p>
-            <label><b>Payment:</b></label>
-                <p class="content_sec">Payment for our services is due upon completion of the repair. Your total charge will be displayed 
-                in your account cart.</p>
-            <label><b>Data Privacy:</b></label>
-                <p class="content_sec">We take data privacy and security seriously. We will not access or copy any of your personal 
-                files or data without your explicit permission. We also use secure data wiping methods when 
-                disposing of any old or damaged hard drives.</p>
-            <label><b>Guarantee:</b></label>
-                <p class="content_sec">We stand behind our work and offer a 30-day guarantee on all repairs. If you experience any 
-                issues with your repaired computer within 30 days of our service, we will work to resolve the 
-                issue at no additional charge and free shipping.</p>
-            <p>Thank you for choosing Computer-World Repair Service. We look forward to serving you.</p>
-            <p>Sincerely,<br>
-                Computer-World Repair Service Service Team</p> 
-        </article>
+        <form class="form">
+            <fieldset class="fset">
+                <h2 class="frm-title">Customer Information</h2>
+                <input type="text" name="fname" placeholder="First Name" />
+                <input type="text" name="lname" placeholder="Last Name" />
+                <input type="text" name="email" placeholder="Email" />
+                <input type="text" name="phone" placeholder="phone" />
+            </fieldset>
+            <fieldset class="fset">
+                <h2 class="frm-title">Device Information</h2>
+                <input type="text" name="dtype" placeholder="Device Type" />
+                <input type="text" name="dbrand" placeholder="Device Brand" />
+                <input type="text" name="dmodel" placeholder="Device Model" />
+                <input type="text" name="dserial" placeholder="Device Serial" />
+            </fieldset>
+            <fieldset class="fset">
+                <h2 class="frm-title">Issue Description</h2>
+                <textarea id="idescript" rows="4" cols="50"></textarea>
+            </fieldset>
+            <fieldset class="fset">
+                <h2 class="frm-title">Service Request</h2>
+                <input type="checkbox" id="repair" value="repair">
+                <label for="repair">Repair Service</label><br>
+                <input type="checkbox" id="install" value="install">
+                <label for="repair">Parts Installation</label><br>
+                <input type="checkbox" id="diagnostic" value="diagnostic">
+                <label for="repair">Diagnostics and Inspection</label><br>
+                <input type="checkbox" id="recovery" value="recovery">
+                <label for="repair">Data Recovery</label><br>
+                <input type="checkbox" id="reformat" value="reformat">
+                <label for="repair">Reformat and Optimize Storage Devices</label><br>
+                <input type="checkbox" id="virus" value="virus">
+                <label for="repair">Virus Scan and Removal</label><br>
+                <input type="checkbox" id="install" value="install">
+                <label for="repair">Software Installation and Configuration</label><br>
+            </fieldset>
+            <section class="submit">
+                <input type="button" value="Submit"  class="btn">
+            </section>
+        </form>
+
     </section>
 
     <footer class="footer_frame">
