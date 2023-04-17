@@ -11,7 +11,7 @@ if not os.path.exists("data/database.db"):
 
 	SQL_STATEMENT = """CREATE TABLE customer (
 		cust_id INTEGER PRIMARY KEY AUTOINCREMENT,
-		login VARCHAR(30),
+		user VARCHAR(30),
 		pass VARCHAR(30),
 		fname VARCHAR(30),
 		lname VARCHAR(30),

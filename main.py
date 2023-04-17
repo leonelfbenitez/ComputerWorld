@@ -1,6 +1,6 @@
 import sqlite3
 from sqlite3 import Error
-from flask import Flask, flash, redirect, request, url_for, render_template
+from flask import Flask, flash, redirect, request, url_for, render_template, jsonify
 import datetime
 from app import conn
 
@@ -17,6 +17,10 @@ app = Flask(__name__)
 # # Insert some users into our database
 # cursor.executemany('INSERT INTO customers(fname, lname, email, join_dt) VALUES (?,?,?,?)', data)
 
+# Insert data into the User table
+# cursor.execute("INSERT INTO user (username, password, email, shipping_address) VALUES (?, ?, ?, ?)",
+#                (username, password, email, shipping_address))
+
 # # Remember to save + close
 # conn.commit()
 # conn.close()
@@ -31,6 +35,74 @@ app = Flask(__name__)
 #     print(i)
 
 # conn.close()
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    try:
+        if request.method == 'POST':
+
+            # Get data
+            user = request.form['user']
+            passw = request.form['pass']
+            fName = request.form['fname']
+            lName = request.form['lname']
+            email = request.form['email']
+            phone = request.form['phone']
+            
+            # establish connection
+            conn = sqlite3.connect("data/database.db")
+            cursor = conn.cursor()
+
+            # check no Null values
+            if user & passw & fName & lName & email & phone:
+
+                # insert data into customer table
+                SQL = "INSERT INTO customer (user, passw, fName, lName, email, phone) VALUES (?, ?, ?, ?, ?, ?)"
+                data = (user, passw, fName, lName, email, phone)
+
+                cursor.execute(SQL, data)
+                conn.commit()
+                conn.close()
+
+                message = {
+                    'status': 200,
+                    'message': 'The user was created successfully'
+                }   
+                resp = jsonify(message)
+                resp.status_code = 200
+                return resp
+            
+            else:
+                conn.close()
+
+                message = {
+                    'status': 510,
+                    'message': 'Some of the fields are empty'
+                }
+                resp = jsonify(message)
+                resp.status_code = 510
+                return resp
+    
+    # for all other exceptions
+    except Exception as e:
+        message = {
+            'status': 500,
+            'message': 'Error: '+str(e)
+            }
+        resp = jsonify(message)
+        resp.status_code = 500
+        return resp
+
+    
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Get form data
+        username = request.form['username']
+        password = request.form['password']
+        
+        # Check if username and password are valid
+        # ... code to validate username and password
 
 # @app.route('/service_form', methods=['POST'])
 # def service_form():
